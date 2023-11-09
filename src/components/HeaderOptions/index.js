@@ -19,7 +19,7 @@ export default function HeaderOptions() {
   return (
     <OptionsContainer>
       {options.map((option) => (
-        <OptionContainer>
+        <OptionContainer key={option}>
           <p>{option}</p>
         </OptionContainer>
       ))}
