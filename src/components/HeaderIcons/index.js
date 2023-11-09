@@ -2,7 +2,6 @@ import profile from "../../images/profile.svg";
 import cart from "../../images/cart.svg";
 import styled from "styled-components";
 
-export default function HeaderIcons() {
   const IconsContainer = styled.ul`
     display: flex;
     align-items: center;
@@ -12,6 +11,7 @@ export default function HeaderIcons() {
     width: 25px;
 
     `
+export default function HeaderIcons() {
 
   const icons = [profile, cart];
 
