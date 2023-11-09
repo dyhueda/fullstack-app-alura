@@ -1,16 +1,27 @@
-import './index.css'
-import profile from '../../images/profile.svg'
-import cart from '../../images/cart.svg'
+import profile from "../../images/profile.svg";
+import cart from "../../images/cart.svg";
+import styled from "styled-components";
 
-export default function HeaderIcons(){
-    
-    const icons = [profile, cart]
-    
-        return (
-            <ul className='icons'>
-                { icons.map( (icon) => (
-                <li className='icon'><img src={icon}></img></li>
-                )) }
-            </ul>
-        )
-    }
+export default function HeaderIcons() {
+  const IconsContainer = styled.ul`
+    display: flex;
+    align-items: center;
+  `
+  const IconContainer = styled.li`
+        margin-right: 40px;
+    width: 25px;
+
+    `
+
+  const icons = [profile, cart];
+
+  return (
+    <IconsContainer>
+      {icons.map((icon) => (
+        <IconContainer>
+          <img src={icon} alt={icon}></img>
+        </IconContainer>
+      ))}
+    </IconsContainer>
+  );
+}

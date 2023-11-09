@@ -1,11 +1,28 @@
-import './index.css'
-export default function HeaderOptions(){
-    const options = ['Categories', 'Favorites', 'Bookcase']
-    return(
-        <ul className="options">
-            {options.map((option)=>(
-                <li className="option"><p>{option}</p></li>
-            ))}
-        </ul>
-    )
+import styled from "styled-components";
+export default function HeaderOptions() {
+  const OptionsContainer = styled.ul`
+    display: flex;
+  `;
+  const OptionContainer = styled.li`
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px;
+    cursor: pointer;
+    min-width: 120px;
+  `;
+
+  const options = ["Categories", "Favorites", "Bookcase"];
+  return (
+    <OptionsContainer>
+      {options.map((option) => (
+        <OptionContainer>
+          <p>{option}</p>
+        </OptionContainer>
+      ))}
+    </OptionsContainer>
+  );
 }
